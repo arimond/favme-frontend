@@ -1,12 +1,12 @@
-import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { PayoutComponent } from './components/user/payout/payout.component';
-import { ProfileComponent } from './components/user/profile/profile.component';
-import { DocumentComponent } from './components/user/document/document.component';
-import { ProductsComponent } from './components/user/products/products.component';
-import { UserComponent } from './components/user/user/user.component';
-import { RegistrationComponent } from './components/registration/registration.component';
-import { LoginComponent } from './components/login/login.component';
-import { LandingComponent } from './components/landing/landing.component';
+import { PagenotfoundComponent } from '../components/pagenotfound/pagenotfound.component';
+import { PayoutComponent } from '../components/user/payout/payout.component';
+import { ProfileComponent } from '../components/user/profile/profile.component';
+import { DocumentComponent } from '../components/user/document/document.component';
+import { ProductsComponent } from '../components/user/products/products.component';
+import { UserComponent } from '../components/user/user/user.component';
+import { RegistrationComponent } from '../components/registration/registration.component';
+import { LoginComponent } from '../components/login/login.component';
+import { LandingComponent } from '../components/landing/landing.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

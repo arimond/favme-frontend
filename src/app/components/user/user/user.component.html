@@ -1,21 +1,13 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
-    <ul>
-      <li [routerLink]="'/user/products'">Sell Products</li>
-      <li [routerLink]="'/user/documents'">Upload Documents</li>
-      <li [routerLink]="'/user/profile'">Profile</li>
-      <li [routerLink]="'/user/payout'">Payout</li>
-    </ul>
-    <!--
-    <mat-list>
-      <mat-list-item [routerLink]="'/user/products'">Sell Products</mat-list-item>
-      <mat-list-item [routerLink]="'/user/documents'">Upload Documents</mat-list-item>
-      <mat-list-item [routerLink]="'/user/profile'">Profile</mat-list-item>
-      <mat-list-item [routerLink]="'/user/payout'">Payout</mat-list-item>
-    </mat-list>
-    -->
-  </mat-drawer>
-  <mat-drawer-content>
+<div fxLayout="row" fxFlexFill>
+  <div class="navigation" fxFlex="20">
+    <div fxLayout="column">
+      <a [routerLink]="'/user/products'">Sell Products</a>
+      <a [routerLink]="'/user/documents'">Upload Documents</a>
+      <a [routerLink]="'/user/profile'">Profile</a>
+      <a [routerLink]="'/user/payout'">Payout</a>
+    </div>
+  </div>
+  <div class="content" fxFlex="80">
     <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </div>
+</div>
