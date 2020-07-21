@@ -11,3 +11,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border-radius: 15px;
     padding: 30px
 }
+
+.productCard {
+    max-width: 350px;
+}
+
+.a {
+    background-color:burlywood;
+}
+
+.b {
+    background-color: hue($color: #999999);
+}
+
+.b {
+    background-color: hue($color: #909009);
+}
+
+.d {
+    background-color: black;
+}

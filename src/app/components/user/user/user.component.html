@@ -1,10 +1,13 @@
 <div fxLayout="row" fxFlexFill>
   <div class="navigation" fxFlex="20">
     <div fxLayout="column">
+      <div fxFlexAlign="center"> FavMe</div>
       <a [routerLink]="'/user/products'">Sell Products</a>
       <a [routerLink]="'/user/documents'">Upload Documents</a>
       <a [routerLink]="'/user/profile'">Profile</a>
       <a [routerLink]="'/user/payout'">Payout</a>
+      <div>{{balance?.balance}}</div>
+      <button mat-raised-button (click)="logout()">Logout</button>
     </div>
   </div>
   <div class="content" fxFlex="80">

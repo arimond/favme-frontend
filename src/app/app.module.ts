@@ -1,5 +1,5 @@
+import { AngularModule } from './modules/angular.module';
 import { MaterialModule } from './modules/material.module';
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './modules/app-routing.module';
@@ -14,7 +14,13 @@ import { PayoutComponent } from './components/user/payout/payout.component';
 import { DocumentComponent } from './components/user/document/document.component';
 import { ProductsComponent } from './components/user/products/products.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/shared/header/header.component';
+import { BankaccountComponent } from './components/user/payout/bankaccount/bankaccount.component';
+import { SubmitpayoutComponent } from './components/user/payout/submitpayout/submitpayout.component';
+import { ProductComponent } from './components/user/products/product/product.component';
+import { AddProductComponent } from './components/user/products/add-product/add-product.component';
+import { PublicProfileComponent } from './components/customer/public-profile/public-profile.component';
+import { ProductContainerComponent } from './components/customer/product-container/product-container.component';
 
 
 @NgModule({
@@ -29,13 +35,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PayoutComponent,
     DocumentComponent,
     ProductsComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    HeaderComponent,
+    BankaccountComponent,
+    SubmitpayoutComponent,
+    ProductComponent,
+    AddProductComponent,
+    PublicProfileComponent,
+    ProductContainerComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]

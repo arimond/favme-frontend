@@ -1,18 +1,19 @@
 <div fxLayout="column" fxFlex="90">
     <h1>Profile</h1>
     <mat-divider></mat-divider>
-    <form fxLayout="column">
+    <form #profileForm="ngForm" (ngSubmit)="uploadProfile(profileForm)" fxLayout="column">
         <mat-form-field>
-            <input matInput placeholder="Profession">
+            <input matInput placeholder="Profession" name="profession" required ngModel>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Email">
+            <input matInput placeholder="Email" name="email" required ngModel>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Phone">
+            <input matInput placeholder="Phone" name="phone" required ngModel>
         </mat-form-field>
+        <input type="file" name="image" (change)="imageSelected($event)">
         <label>Description</label>
-        <textarea name="test" id="" cols="30" rows="10"></textarea>
-        <button mat-raised-button>Action</button>
+        <textarea name="description" id="" cols="30" rows="10" required ngModel></textarea>
+        <button mat-raised-button type="subimt">Upload Profile</button>
     </form>
 </div>

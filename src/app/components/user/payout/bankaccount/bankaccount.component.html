@@ -1,0 +1,17 @@
+<form #bankaccountForm="ngForm" (ngSubmit)="uploadBankaccount(bankaccountForm)">
+    <mat-form-field>
+        <input matInput placeholder="Country" name="country" required ngModel>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Name of beneficiary" name="beneficiary" required ngModel>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="IBAN" name="iban" required ngModel>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="BIC" name="bic" required ngModel>
+    </mat-form-field>
+    <div>
+        <button mat-raised-button type="submit">Add Bankaccount</button>
+    </div>
+</form>

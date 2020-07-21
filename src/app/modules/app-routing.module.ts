@@ -1,3 +1,4 @@
+import { CustomerComponent } from './../components/customer/customer.component';
 import { PagenotfoundComponent } from '../components/pagenotfound/pagenotfound.component';
 import { PayoutComponent } from '../components/user/payout/payout.component';
 import { ProfileComponent } from '../components/user/profile/profile.component';
@@ -14,6 +15,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
+  {
+    path: 'customer',
+    component: CustomerComponent
+  },
   {
     path: 'landing',
     component: LandingComponent
@@ -62,7 +67,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(
     routes,
-    {enableTracing: true} // Logs Router events to console for development
+    //{enableTracing: true} // Logs Router events to console for development
     )],
   exports: [RouterModule]
 })

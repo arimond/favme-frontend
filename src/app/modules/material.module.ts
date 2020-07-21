@@ -9,6 +9,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -26,7 +27,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     MatDividerModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ]
 })
 

@@ -1,0 +1,22 @@
+<form #productForm="ngForm" (ngSubmit)="addProduct(productForm)">
+    <div fxLayout="column">
+        <mat-form-field>
+            <input matInput type="text" name="name" placeholder="Name" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" name="price" placeholder="Price" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-select placeholder="Currency" name="currency" ngModel required>
+                <mat-option value="eur">Euro</mat-option>
+                <mat-option value="usd">Dollar</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-label>Description</mat-label>
+        <mat-form-field>
+            <textarea matInput name="description" cols="30" rows="10" ngModel required></textarea>
+        </mat-form-field>
+        <input type="file" placeholder="Image" (change)="imageSelected($event)">
+        <button mat-raised-button type="">Upload Product</button>
+    </div>
+</form>

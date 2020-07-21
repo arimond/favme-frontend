@@ -1,0 +1,17 @@
+<form #payoutForm="ngForm" (ngSubmit)="requestPayout(payoutForm)">
+    <div fxLayout="row">
+        <mat-form-field>
+            <mat-select placeholder="Select Bankaccount" name="bankaccountId" ngModel required>
+                <mat-option *ngFor="let bankaccount of bankaccounts" [value]="bankaccount.bankaccountId">
+                    {{bankaccount.iban}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="text" placeholder="Amount" name="amount" fxFlex="33" ngModel required>
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button type="submit">Payout</button>
+    </div>
+</form>
