@@ -1,17 +1,17 @@
-<div fxLayout="column" fxLayoutAlign="none stretch" fxFlexFill>
-    <app-header fxFlex="10" fxLayoutAlign="center center"></app-header>
+<div fxLayout="column" fxFlexFill>
+    <app-header fxFlex="20" fxLayoutAlign="center center"></app-header>
     <div fxLayout="column" fxLayoutAlign="center center" fxFlex="60">
-        <div>Login</div>
+        <div class="header-grey">Login</div>
         <form #loginForm="ngForm" (ngSubmit)="login(loginForm)" class="form" fxLayout="column">
-            <mat-form-field>
-                <input matInput placeholder="Email" name="email" required ngModel>
+            <mat-form-field class="mat-form-field-login">
+                <input matInput placeholder="Email" name="email"  required ngModel>
             </mat-form-field>
-            <mat-form-field>
+            <mat-form-field class="mat-form-field-login">
                 <input matInput placeholder="Password" type="password" name="password" required ngModel>
             </mat-form-field>
             <div fxLayout="row">
-                <button fxFlex mat-raised-button type="submit">Login</button>
-                <a fxFlex mat-button routerLink="/register">Register</a>
+                <button fxFlex mat-raised-button type="submit" class="action-button">Login</button>
+                <a fxFlex mat-button routerLink="/register" class="action-button-light">Register</a>
             </div>
         </form>
     </div>

@@ -1,4 +1,15 @@
-<div fxLayout="column" fxFill>
-    <app-public-profile></app-public-profile>
-    <app-product-container></app-product-container>
+<div class="customer-container">
+    <div fxLayout="column" fxFill>
+        <div class="customer-header">
+            {{username?.username}}
+        </div>
+        <mat-divider></mat-divider>
+        <div class="customer-container-content">
+            <app-public-profile></app-public-profile>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="customer-container-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>

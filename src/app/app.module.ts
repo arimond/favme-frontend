@@ -21,6 +21,9 @@ import { ProductComponent } from './components/user/products/product/product.com
 import { AddProductComponent } from './components/user/products/add-product/add-product.component';
 import { PublicProfileComponent } from './components/customer/public-profile/public-profile.component';
 import { ProductContainerComponent } from './components/customer/product-container/product-container.component';
+import { CustomerProductComponent } from './components/customer/product-container/customer-product/customer-product.component';
+import { PayComponent } from './components/customer/pay/pay.component';
+import { SingleProductComponent } from './components/customer/single-product/single-product.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { ProductContainerComponent } from './components/customer/product-contain
     ProductComponent,
     AddProductComponent,
     PublicProfileComponent,
-    ProductContainerComponent
+    ProductContainerComponent,
+    CustomerProductComponent,
+    PayComponent,
+    SingleProductComponent
   ],
   imports: [
     AppRoutingModule,

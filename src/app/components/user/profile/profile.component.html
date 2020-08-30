@@ -1,19 +1,23 @@
-<div fxLayout="column" fxFlex="90">
-    <h1>Profile</h1>
+<div fxLayout="column">
+    <div class="user-header">Profile</div>
     <mat-divider></mat-divider>
-    <form #profileForm="ngForm" (ngSubmit)="uploadProfile(profileForm)" fxLayout="column">
-        <mat-form-field>
-            <input matInput placeholder="Profession" name="profession" required ngModel>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Email" name="email" required ngModel>
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Phone" name="phone" required ngModel>
-        </mat-form-field>
-        <input type="file" name="image" (change)="imageSelected($event)">
-        <label>Description</label>
-        <textarea name="description" id="" cols="30" rows="10" required ngModel></textarea>
-        <button mat-raised-button type="subimt">Upload Profile</button>
-    </form>
+    <div class="user-form">
+        <form #profileForm="ngForm" (ngSubmit)="uploadProfile(profileForm)" fxLayout="column">
+            <mat-form-field>
+                <input matInput placeholder="Profession" name="profession" required ngModel>
+            </mat-form-field>
+            <div fxLayout="row">
+                <mat-form-field>
+                    <input matInput placeholder="Email" name="email" required ngModel>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Phone" name="phone" required ngModel>
+                </mat-form-field>
+            </div>
+            <input class="file-input" type="file" name="image" (change)="imageSelected($event)">
+            <label>Description</label>
+            <textarea name="description" id="" cols="30" rows="10" required ngModel></textarea>
+            <button class="general-button" mat-raised-button type="subimt">Upload Profile</button>
+        </form>
+    </div>
 </div>

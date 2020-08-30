@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { environment } from './../../environments/environment';
 import { ProductUpload } from './../models/ProductUpload';
 import { Injectable } from '@angular/core';
@@ -23,5 +24,13 @@ export class ProductService {
     this.http.post<Product>(environment.serverUrl+'users/products',fd).subscribe(
       product => console.log(product)
     );
+  }
+
+  getProducts(userId:number):Observable<Product[]>{
+    return this.http.get<Product[]>(`${environment.serverUrl}users/${userId}/products`);
+  }
+
+  getProduct(userId:number, productId:number):Observable<Product>{
+    return this.http.get<Product>(`${environment.serverUrl}users/${userId}/products/${productId}`);
   }
 }

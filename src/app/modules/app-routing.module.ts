@@ -1,3 +1,5 @@
+import { SingleProductComponent } from './../components/customer/single-product/single-product.component';
+import { ProductContainerComponent } from './../components/customer/product-container/product-container.component';
 import { CustomerComponent } from './../components/customer/customer.component';
 import { PagenotfoundComponent } from '../components/pagenotfound/pagenotfound.component';
 import { PayoutComponent } from '../components/user/payout/payout.component';
@@ -11,14 +13,7 @@ import { LandingComponent } from '../components/landing/landing.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-
-
-
 const routes: Routes = [
-  {
-    path: 'customer',
-    component: CustomerComponent
-  },
   {
     path: 'landing',
     component: LandingComponent
@@ -36,6 +31,11 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       {
+        path:'',
+        redirectTo: 'profile',
+        pathMatch: 'full'
+      },
+      {
         path: 'products',
         component: ProductsComponent
       },
@@ -50,6 +50,25 @@ const routes: Routes = [
       {
         path: 'payout',
         component: PayoutComponent
+      }
+    ]
+  },
+  {
+    path: 'customer/user/:userId',
+    component: CustomerComponent,
+    children: [
+      {
+        path:'',
+        redirectTo: 'products',
+        pathMatch: 'full'
+      },
+      {
+        path: 'products',
+        component: ProductContainerComponent
+      },
+      {
+        path: 'products/:productId',
+        component: SingleProductComponent
       }
     ]
   },

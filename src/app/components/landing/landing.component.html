@@ -1,15 +1,15 @@
-<div fxLayout="column" fxLayoutAlign="none stretch" fxFlexFill>
-    <app-header fxFlex="10" fxLayoutAlign="center center"></app-header>
+<div fxLayout="column" fxFlexFill>
+    <app-header fxFlex="20" fxLayoutAlign="center center"></app-header>
     <div fxLayout="row" fxFlex fxFlexFill>
         <div fxFlex="66" fxLayout="column" fxLayoutAlign="center center">
-            <div class="landingtitle">Sell your content now!</div>
-            <div class="landingsubtitle"> By sharing your link</div>
-            <div class="landingtext">FavMe allows indie content producers to sell directly to their fans in a quick and secure way. Our cut is only 10%</div>
-            <button mat-raised-button>Join Now</button>
-            <button mat-raised-button>Or login</button>
+            <div class="landing-title">Sell your content now!</div>
+            <div class="landing-sub-title"> By sharing your link</div>
+            <div class="landing-text">FavMe allows indie content producers to sell directly to their fans in a quick and secure way. Our cut is only 10%!</div>
+            <button [routerLink]="'/register'" mat-raised-button class="action-button">Join Now</button>
+            <button [routerLink]="'/login'" mat-raised-button class="action-button-light">Or login</button>
         </div>
         <div fxFlex fxLayoutAlign="end end">
-            <img src="../../../assets/images/Landingpage_Frau.jpeg" alt="Landing Image" width="400">
+            <img class="background" src="../../../assets/images/Landingpage_Frau.jpeg" alt="Landing Image" width="400">
         </div>
         
 

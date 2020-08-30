@@ -1,0 +1,9 @@
+<mat-card class="productCard">
+    <mat-card-header>
+        <mat-card-title>{{product.name}}</mat-card-title>
+    </mat-card-header>
+    <img matCardImage [src]="product.image">
+    <mat-card-actions align="start">
+        <button (click)="navigateToProduct()" mat-raised-button>Buy for {{product.price}}</button>
+    </mat-card-actions>
+</mat-card>

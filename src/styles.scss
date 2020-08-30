@@ -1,33 +1,227 @@
 /* You can add global styles to this file, and also import other style files */
+// Color Variables
+$header-color: #000000;
+$background-color: #F7F7F7;
+$heading-color: #5E5E5E;
+$text-color-light: #87A1A8;
+$action-color: #FF7E78;
+$action-background: #9CB8AB;
+$text-color: #717171;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Font Variables
+// Header
+$header-font-big: 65px;
+$header-font-big-sub: 50px;
+$header-font-small: 30px;
+$nav-font: 20px;
+$header-weight: bold;
 
+
+html, body { 
+    height: 100%;
+    background-color: $background-color;
+}
+body { 
+    margin: 0; font-family:-apple-system, BlinkMacSystemFont, sans-serif !important;
+    color: $text-color; 
+}
+// Headers (they are used in many components)
+.header-black {
+    color: $header-color;
+    font-size: $header-font-big;
+    font-weight: $header-weight;
+    z-index: 2;
+}
+.small{
+    font-size: $header-font-small;
+}
+.header-white {
+    margin: 40px 10px 40px 10px;
+    color: $background-color;
+    font-size: $header-font-big-sub;
+    font-weight: $header-weight;
+}
+.header-grey {
+    margin: 10px 10px 40px 10px;
+    color: $text-color-light;
+    font-size: $header-font-big;
+    font-weight: $header-weight;
+}
+
+// Buttons (are used in many components)
+.action-button-light{
+    color: $heading-color;
+    width: 150px;
+    margin: 10px 10px 10px 10px !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: $text-color-light !important;
+}
+.action-button {
+    background-color: $text-color-light;
+    color: $action-color;
+    width: 150px;
+    margin: 10px 10px 10px 10px !important;
+}
+.general-button {
+    background-color: $text-color-light;
+    color: $action-color;
+    width: 180px;
+}
+// Content for Landing page (only used in landingpage)
+.landing-title {
+    max-width: 350px;
+    text-align: center;
+    line-height: 45px;
+    height: 130px;
+    color: $text-color-light;
+    font-size: $header-font-big-sub;
+    font-weight: $header-weight;
+}
+.landing-sub-title {
+    color:$heading-color;
+    font-size: $header-font-small;
+    text-align: center;
+    height: 40px;
+}
+.landing-text{
+    max-width: 340px;
+    text-align:center;
+    color:$heading-color;
+    height: 80px;
+}
+// Only for landingpage Image
+.background {
+    z-index: 1;
+}
+// Form for Login & Registration
 .form {
+    margin-top: 20px;
     width: 400px;
     border-style: solid;
-    border-width: 1.5px;
-    border-color: grey;
+    border-width: 1.7px;
+    border-color: $text-color-light;
     border-radius: 15px;
-    padding: 30px
+    padding: 20px;
+}
+// Navsidebar
+.navigation {
+    background-color: $heading-color;
+    color:$background-color;
+}
+a{
+    color:inherit;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 7px;
+    margin-left: 12px;
+}
+.balance {
+    text-align: center;
+    font-size: $nav-font;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+// User Content
+.content-container{
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
+.user-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .productCard {
-    max-width: 350px;
+    max-width: 320px;
+    margin: 0px 5px 5px 0px;
+}
+.user-header{
+    color:$heading-color;
+    font-size: $nav-font;
+    margin-bottom: 5px;
+}
+.text-input{
+    width: 200px;
+    margin-right: 50px;
+}
+.file-input{
+    margin-top:30px;
+    margin-bottom: 30px;
 }
 
-.a {
-    background-color:burlywood;
+textarea{
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 10px;
 }
 
-.b {
-    background-color: hue($color: #999999);
+.customer-header {
+    text-align:center;
+    margin: 60px;
+    font-size: $header-font-big;
 }
 
-.b {
-    background-color: hue($color: #909009);
+.customer-container-content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: normal;
+    
 }
 
-.d {
-    background-color: black;
+.customer-container{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.customer-label{
+    margin-right: 60px;
+    width: 60px;
+}
+
+.customer-row{
+    margin-top: 10px;
+}
+
+
+
+
+// Override Materials Styles
+// Override Form Fields
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    background: $text-color;
+}
+
+.mat-divider {
+    border-top-color: $text-color-light;
+}
+
+// For general Input
+.mat-form-field {
+    width: 200px;
+    margin-right: 50px;
+    color: $text-color;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: normal;
+}
+
+//
+.mat-form-field-login {
+    width: 354px;
+    color: $text-color;
+    font-weight: 400;
+    line-height: 1.125;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: normal;
+}
+
+//Button
+.mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }

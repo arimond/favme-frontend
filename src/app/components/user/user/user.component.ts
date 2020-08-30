@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
   public balance:Balance;
+  public userUrl:String;
 
   constructor(
     private userService:UserService
@@ -16,6 +17,7 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBalance();
+    this.userUrl = `http://localhost:4200/customer/user/${this.userService.getUserId()}`;
   }
 
   getBalance(){

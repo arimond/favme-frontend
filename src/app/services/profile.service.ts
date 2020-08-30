@@ -24,7 +24,7 @@ export class ProfileService {
     return this.http.put<Profile>(environment.serverUrl+'users/profile',fd);
   }
 
-  getProfile(profile:ProfileUpload):Observable<Profile>{
-    return this.http.get<Profile>(environment.serverUrl+'users/profile');
+  getProfile(userId:number):Observable<Profile>{
+    return this.http.get<Profile>(`${environment.serverUrl}users/${userId}/profile`);
   }
 }

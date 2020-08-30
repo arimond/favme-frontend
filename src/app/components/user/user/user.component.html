@@ -1,16 +1,21 @@
 <div fxLayout="row" fxFlexFill>
-  <div class="navigation" fxFlex="20">
+  <div class="navigation" fxFlex="25">
     <div fxLayout="column">
-      <div fxFlexAlign="center"> FavMe</div>
+      <div fxFlexAlign="center" class="header-white">
+        FAV<span class="small">ME</span>
+      </div>
       <a [routerLink]="'/user/products'">Sell Products</a>
       <a [routerLink]="'/user/documents'">Upload Documents</a>
       <a [routerLink]="'/user/profile'">Profile</a>
       <a [routerLink]="'/user/payout'">Payout</a>
-      <div>{{balance?.balance}}</div>
-      <button mat-raised-button (click)="logout()">Logout</button>
+      <div class="balance">Balance: {{balance?.balance}} €</div>
+      <a href="{{userUrl}}">Link</a>
+      <button fxFlexAlign="center" class="action-button"mat-raised-button (click)="logout()">Logout</button>
     </div>
   </div>
-  <div class="content" fxFlex="80">
-    <router-outlet></router-outlet>
+  <div fxFlex="80">
+    <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

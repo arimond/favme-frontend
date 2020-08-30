@@ -1,5 +1,6 @@
 import { Observable } from 'rxjs';
 import { Balance } from './../models/Balance';
+import { Username } from './../models/Username'
 import { AuthenticationService } from './authentication.service';
 import { Router } from '@angular/router';
 import { JsonHeader } from './HttpHeader/JsonHeader';
@@ -57,5 +58,13 @@ export class UserService {
 
   getBalance():Observable<Balance>{
       return this.http.get<Balance>(environment.serverUrl+'users/balance');
+  }
+
+  getUsername(userId:number):Observable<Username>{
+    return this.http.get<Username>(`${environment.serverUrl}users/username/${userId}`);
+  }
+
+  getUserId(){
+    return this.authService.getUserId();
   }
 }

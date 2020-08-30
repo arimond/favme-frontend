@@ -1,4 +1,4 @@
-import { Payout } from './../../../../models/Payout';
+import { PayoutRequest } from './../../../../models/PayoutRequest';
 import { Bankaccount } from './../../../../models/Bankaccount';
 import { BankaccountService } from './../../../../services/bankaccount.service';
 import { PayoutService } from './../../../../services/payout.service';
@@ -29,7 +29,7 @@ export class SubmitpayoutComponent implements OnInit {
   }
 
   requestPayout(payout:NgForm){
-    this.payoutService.requestPayout(<Payout>payout.value);
+    this.payoutService.requestPayout(<PayoutRequest>payout.value);
   }
 
 }

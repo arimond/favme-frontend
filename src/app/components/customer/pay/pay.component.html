@@ -1,0 +1,17 @@
+<form id="payment-form">
+    <input id="cardholder-mail" placeholder="Email Address" />
+    <div>Credit or debit card</div>
+    <div>
+        <div id="card-element">
+            <!--Stripe.js injects the Card Element-->
+        </div>
+    </div>
+    <button id="submit" style="text-align: center" (click)="submitPayment()">
+        <div class="spinner hidden" id="spinner"></div>
+        <span id="button-text">Pay {{this.price}}</span>
+    </button>
+    <p id="card-error" role="alert"></p>
+    <p class="result-message hidden">
+        Payment succeeded
+    </p>
+</form>

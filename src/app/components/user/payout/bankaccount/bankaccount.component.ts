@@ -1,4 +1,3 @@
-import { Bankaccount } from './../../../../models/Bankaccount';
 import { BankaccountService } from './../../../../services/bankaccount.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';

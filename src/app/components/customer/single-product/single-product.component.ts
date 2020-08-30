@@ -4,30 +4,28 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-product-container',
-  templateUrl: './product-container.component.html',
-  styleUrls: ['./product-container.component.scss']
+  selector: 'app-single-product',
+  templateUrl: './single-product.component.html',
+  styleUrls: ['./single-product.component.scss']
 })
-export class ProductContainerComponent implements OnInit {
-
-  public products:Product[];
+export class SingleProductComponent implements OnInit {
+  public product:Product;
 
   constructor(
     private productService: ProductService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
-    this.getProducts();
+    this.getProduct();
   }
 
-  getProducts(){
-    // Extract UserId from URL
+  getProduct(){
     const userId = parseInt(this.route.snapshot.parent.paramMap.get('userId'));
-
-    this.productService.getProducts(userId).subscribe(
-      (products) => {
-        this.products = products;
+    const productId = parseInt(this.route.snapshot.paramMap.get('productId'));
+    this.productService.getProduct(userId, productId).subscribe(
+      product => {
+        this.product = product;
       }
     )
   }

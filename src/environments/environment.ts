@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   serverUrl: 'http://localhost:4000/api/',
+  stripePK: 'pk_test_v6x251gUWqoT6DfmbZCLddHS00I8ge0E21'
 };
 /*
  * For easier debugging in development mode, you can import the following file

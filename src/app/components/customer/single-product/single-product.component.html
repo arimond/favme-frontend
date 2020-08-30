@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{product?.name}}</mat-card-title>
+    </mat-card-header>
+    <img *ngIf="product" matCardImage [src]="product.image">
+    <mat-card-content>
+        {{product?.description}}
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center">
+        <app-pay *ngIf="product" [price]="product.price"></app-pay>
+    </mat-card-actions>
+</mat-card>

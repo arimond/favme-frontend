@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment';
-import { Payout } from './../models/Payout';
+import { PayoutRequest } from './../models/PayoutRequest';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,10 +12,9 @@ export class PayoutService {
     private http:HttpClient
   ) { }
 
-  requestPayout(payout:Payout):void{
-    console.log(payout);
+  requestPayout(payout:PayoutRequest):void{
     this.http.post(environment.serverUrl+'users/payouts',payout).subscribe(
       payout => console.log(payout)
-    )
+    );
   }
 }

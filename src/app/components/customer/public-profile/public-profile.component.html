@@ -1,1 +1,18 @@
-<p>public-profile works!</p>
+<div fxLayout="column">
+    <div class="customer-row" fxLayout="row">
+        <label class="customer-label">Profession:</label>
+        <label>{{profile?.profession}}</label>
+    </div>
+    <div class="customer-row" fxLayout="row">
+        <label class="customer-label">Description:</label>
+        <label>{{profile?.description}}</label>
+    </div>
+    <div class="customer-row" fxLayout="row">
+        <label class="customer-label">Email:</label>
+        <label>{{profile?.email}}</label>
+    </div>
+    <div class="customer-row" fxLayout="row">
+        <label class="customer-label">Phone:</label>
+        <label>{{profile?.phone}}</label>
+    </div>
+</div>

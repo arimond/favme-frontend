@@ -1,17 +1,18 @@
 <div fxLayout="column">
-    <div class="userheader">
-        Payouts
+    <div class="user-header">
+        Upload Documents
     </div>
     <mat-divider></mat-divider>
-    <form #documentForm="ngForm" (ngSubmit)="uploadDocument(documentForm)" fxLayout="column">
-        <mat-form-field>
-            <mat-select name="subject" placeholder="Card Subject" ngModel required>
-                <mat-option value="bankcard">Bank Card</mat-option>
-                <mat-option value="identitycard">Identity Card</mat-option>
-            </mat-select>
-        </mat-form-field>
-        <mat-label>Card</mat-label>
-        <input type="file" name="image" (change)="imageSelected($event)">
-        <button mat-raised-button type="submit">Upload Document</button>
-    </form>
+    <div class="user-form">
+        <form #documentForm="ngForm" (ngSubmit)="uploadDocument(documentForm)" fxLayout="column">
+            <mat-form-field>
+                <mat-select name="subject" placeholder="Card Subject" ngModel required>
+                    <mat-option value="bankcard">Bank Card</mat-option>
+                    <mat-option value="identitycard">Identity Card</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <input class="file-input" type="file" name="image" (change)="imageSelected($event)">
+            <button class="general-button" mat-raised-button type="submit">Upload Document</button>
+        </form>
+    </div>
 </div>
